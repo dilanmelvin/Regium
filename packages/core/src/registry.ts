@@ -12,9 +12,7 @@ export class Registry implements PluginHost {
   registerCountryPack(pack: CountryPack): void {
     this.assertMutable();
     const code = pack.country.jurisdiction.toUpperCase();
-    if (this.countries.has(code)) {
-      throw new Error(`Country pack already registered for ${code}`);
-    }
+    // Last-wins: detailed T1 packs registered after base packs override them.
     this.countries.set(code, pack);
     // Auto-register validators contributed by the pack.
     for (const v of pack.validators ?? []) {

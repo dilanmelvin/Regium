@@ -98,7 +98,7 @@ export function CountryOverview({ country }: { country: string }) {
                   <td>{typeof p.name === "string" ? p.name : (p.name.en ?? p.type)}</td>
                   <td className="mono">{p.minDaysPerYear}</td>
                   <td>{p.paid ? "Yes" : "No"}</td>
-                  <td className="mono">{p.eligibilityDays}</td>
+                  <td className="mono">{p.eligibilityDays ?? 0}</td>
                 </tr>
               ))}
             </tbody>
