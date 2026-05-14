@@ -1,0 +1,15 @@
+{
+  "name": "@regium/docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Regium documentation site (static).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  }
+}
