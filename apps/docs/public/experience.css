@@ -295,3 +295,40 @@
   .exp-tabs__inner { gap: 2px; }
   .exp-tab { padding: 8px 14px; font-size: 13px; }
 }
+
+
+/* Payroll section titles */
+.exp-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 28px 0 12px;
+  color: var(--text);
+}
+
+.exp-section-title:first-child {
+  margin-top: 0;
+}
+
+.exp-regime-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-light);
+  margin: 16px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.exp-regime-note {
+  font-size: 13px;
+  color: var(--text-subtle);
+  margin-bottom: 8px;
+}
+
+#payroll-grid .exp-table-wrap {
+  margin-bottom: 16px;
+}
+
+#payroll-grid .exp-grid {
+  margin-bottom: 24px;
+}
