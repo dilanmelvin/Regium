@@ -7,7 +7,6 @@
   "scripts": {
     "generate-data": "node generate-data.mjs",
     "dev": "vite",
-    "prebuild": "node generate-data.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
