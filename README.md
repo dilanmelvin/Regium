@@ -61,12 +61,14 @@ import us from "@regium/country-us";
 
 const regium = createRegium({ plugins: [india, us] });
 
-regium.getCountryConfig("IN").currency;            // → { code: "INR", symbol: "₹", … }
-regium.validate({ country: "IN", field: "PAN", value: "ABCPL1234C" });
-//   → { ok: true, normalized: "ABCPL1234C" }
-regium.getEmployeeFields("US");                     // → ComplianceField[] for US
-```
+regium.getCountryConfig("IN").currency;
+regium.validate({
+  country: "IN",
+  field: "PAN",
+  value: "ABCPL1234C",
+});
 
+regium.getEmployeeFields("US");
 ## Comparable to
 
 | Project       | What we borrowed                                        |
