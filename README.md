@@ -1,6 +1,15 @@
 <div align="center">
 
-# Regium
+                                                            
+ ▄▄▄▄▄▄    ▄▄▄▄▄▄▄▄     ▄▄▄▄    ▄▄▄▄▄▄   ▄▄    ▄▄  ▄▄▄  ▄▄▄ 
+ ██▀▀▀▀██  ██▀▀▀▀▀▀   ██▀▀▀▀█   ▀▀██▀▀   ██    ██  ███  ███ 
+ ██    ██  ██        ██           ██     ██    ██  ████████ 
+ ███████   ███████   ██  ▄▄▄▄     ██     ██    ██  ██ ██ ██ 
+ ██  ▀██▄  ██        ██  ▀▀██     ██     ██    ██  ██ ▀▀ ██ 
+ ██    ██  ██▄▄▄▄▄▄   ██▄▄▄██   ▄▄██▄▄   ▀██▄▄██▀  ██    ██ 
+ ▀▀    ▀▀▀ ▀▀▀▀▀▀▀▀     ▀▀▀▀    ▀▀▀▀▀▀     ▀▀▀▀    ▀▀    ▀▀ 
+                                                            
+                                                            
 
 ### Global Workforce Compliance Infrastructure for Developers
 
@@ -77,6 +86,7 @@ import us from "@regium/country-us";
 // Create a Regium instance with the countries you need.
 const regium = createRegium({ plugins: [india, us] });
 
+<<<<<<< HEAD
 // 1. Country lookup
 const config = regium.getCountryConfig("IN");
 console.log(config.name);           // "India"
@@ -110,6 +120,80 @@ regium.listCountries();
 ```
 
 ### Load all 218 countries
+=======
+regium.getCountryConfig("IN").currency;
+regium.validate({
+  country: "IN",
+  field: "PAN",
+  value: "ABCPL1234C",
+});
+
+regium.getEmployeeFields("US");
+## Comparable to
+
+| Project       | What we borrowed                                        |
+| ------------- | ------------------------------------------------------- |
+| **Stripe**    | Versioned APIs, country packs, enterprise reliability   |
+| **Prisma**    | Schema-driven, codegen, DX-first                        |
+| **TanStack**  | Framework-agnostic core + adapters                      |
+| **Zod**       | Composable schemas, type inference, tiny core           |
+
+## Quick start
+
+> **Tip:** install only the country packs you need — they're tree-shakable and ~5–11 KB each minified.
+
+### npm
+
+```bash
+npm install @regium/core @regium/country-in
+```
+
+### pnpm
+
+```bash
+pnpm add @regium/core @regium/country-in
+```
+
+### yarn
+
+```bash
+yarn add @regium/core @regium/country-in
+```
+
+### bun
+
+```bash
+bun add @regium/core @regium/country-in
+```
+
+### Use it
+
+```ts
+import { createRegium } from "@regium/core";
+import india from "@regium/country-in";
+
+const regium = createRegium({ plugins: [india] });
+
+// Country lookup
+regium.getCountryConfig("IN");
+
+// Validate a tax ID
+regium.validate({ country: "IN", field: "PAN", value: "ABCPL1234C" });
+
+// Generate localized employee fields
+regium.getEmployeeFields("IN");
+
+// Compute payroll
+import { computePayroll } from "@regium/payroll";
+computePayroll({
+  annualGross: 1500000,
+  rules: regium.getPayrollRules("IN"),
+  taxRules: regium.getTaxRules("IN"),
+});
+```
+
+Want everything bundled? `@regium/countries` re-exports all built-in packs:
+>>>>>>> 398240a740ece5dcea45797855c5e8aed6c98d15
 
 ```ts
 import { createRegium } from "@regium/core";
