@@ -1,6 +1,6 @@
 {
   "name": "@regium/react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React adapter for Regium — hooks, context, headless components.",
   "license": "Apache-2.0",
   "type": "module",
@@ -14,9 +14,16 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "sideEffects": false,
-  "scripts": { "build": "tsup", "typecheck": "tsc --noEmit", "clean": "rimraf dist" },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
   "dependencies": {
     "@regium/core": "workspace:*",
     "@regium/types": "workspace:*",
@@ -32,5 +39,7 @@
     "react": "^18.3.1",
     "@types/react": "^18.3.11"
   },
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  }
 }

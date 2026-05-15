@@ -2,10 +2,12 @@
   "name": "@regium/docs",
   "version": "0.1.0",
   "private": true,
-  "description": "Regium documentation site (static).",
+  "description": "Regium documentation and marketing site.",
   "type": "module",
   "scripts": {
+    "generate-data": "node generate-data.mjs",
     "dev": "vite",
+    "prebuild": "node generate-data.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

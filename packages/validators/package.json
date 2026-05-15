@@ -1,6 +1,6 @@
 {
   "name": "@regium/validators",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Composable validators for the Regium ecosystem.",
   "license": "Apache-2.0",
   "type": "module",
@@ -19,7 +19,10 @@
       "require": "./dist/global.cjs"
     }
   },
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsup",

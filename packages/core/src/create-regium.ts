@@ -16,6 +16,7 @@ import type {
 import { isActiveOn } from "@regium/types";
 import { toISODate } from "@regium/utils";
 import { CountryNotFoundError, FieldNotFoundError, ValidatorNotFoundError } from "./errors.js";
+import { globalValidators } from "./global-validators.js";
 import { Registry } from "./registry.js";
 
 export interface RegiumOptions {
@@ -94,6 +95,12 @@ export function createRegium(options: RegiumOptions = {}): Regium {
   const effectiveDate = options.effectiveDate
     ? toISODate(options.effectiveDate)
     : toISODate(new Date());
+
+  // Always seed the registry with global validators (IBAN, SWIFT, email, phone).
+  for (const v of globalValidators) {
+    registry.registerValidator(v);
+  }
+
   // Load plugins synchronously (most country packs are sync).
   for (const input of options.plugins ?? []) {
     const plugin = isCountryPack(input) ? packToPlugin(input) : input;

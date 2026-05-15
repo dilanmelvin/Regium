@@ -10,8 +10,8 @@
   },
   "workspaces": ["apps/*", "packages/*", "tools/*"],
   "scripts": {
+    "dev": "pnpm --filter @regium/docs dev",
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
     "test": "turbo run test",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
@@ -21,7 +21,10 @@
     "changeset": "changeset",
     "version": "changeset version",
     "release": "turbo run build && changeset publish",
-    "playground": "pnpm --filter @regium/playground dev"
+    "docs": "pnpm --filter @regium/docs dev",
+    "smoke-test": "node scripts/smoke-test.mjs",
+    "publish:dry": "node scripts/publish.mjs --dry-run",
+    "publish:npm": "node scripts/publish.mjs"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

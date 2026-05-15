@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience Centre — Regium</title>
+  <meta name="description" content="Try Regium live. Select any country and explore company & employee compliance fields, validate IDs, and see payroll data." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/experience.css" />
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand">
+        <div class="nav__logo">R</div>
+        <span class="nav__name">Regium</span>
+      </a>
+      <div class="nav__links">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/experience.html" class="nav__link nav__link--active">Experience Centre</a>
+        <a href="https://github.com/" class="nav__gh" target="_blank" rel="noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <section class="exp-hero">
+    <div class="exp-hero__inner">
+      <div class="hero__badge">Live Demo · 218 Countries · Real Validation</div>
+      <h1 class="exp-hero__title">Experience Centre</h1>
+      <p class="exp-hero__sub">Select any country. See real compliance fields for companies and employees. Validate IDs live. Explore payroll & tax data.</p>
+    </div>
+  </section>
+
+  <!-- Country picker -->
+  <section class="exp-picker">
+    <div class="exp-picker__inner">
+      <label for="exp-country" class="exp-picker__label">Select a country</label>
+      <div class="exp-picker__row">
+        <input type="search" id="exp-search" class="exp-picker__search" placeholder="Search by name, ISO code, or currency..." autocomplete="off" />
+      </div>
+      <select id="exp-country" class="exp-picker__select" size="1">
+        <option value="">Loading countries...</option>
+      </select>
+      <div class="exp-picker__info" id="exp-info"></div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <section class="exp-tabs">
+    <div class="exp-tabs__inner">
+      <button class="exp-tab active" data-tab="overview">Overview</button>
+      <button class="exp-tab" data-tab="company">Company Fields</button>
+      <button class="exp-tab" data-tab="employee">Employee Fields</button>
+      <button class="exp-tab" data-tab="validate">Validate IDs</button>
+      <button class="exp-tab" data-tab="payroll">Payroll & Tax</button>
+    </div>
+  </section>
+
+  <!-- Content panels -->
+  <main class="exp-content">
+    <div class="exp-content__inner">
+      <!-- Overview -->
+      <div class="exp-panel active" id="panel-overview">
+        <div class="exp-grid" id="overview-grid"></div>
+      </div>
+
+      <!-- Company fields -->
+      <div class="exp-panel" id="panel-company">
+        <h2 class="exp-panel__title">Company compliance fields</h2>
+        <p class="exp-panel__sub">Required IDs and registrations for companies operating in this jurisdiction.</p>
+        <div class="exp-table-wrap" id="company-table"></div>
+      </div>
+
+      <!-- Employee fields -->
+      <div class="exp-panel" id="panel-employee">
+        <h2 class="exp-panel__title">Employee compliance fields</h2>
+        <p class="exp-panel__sub">Required IDs and documents for employees in this jurisdiction.</p>
+        <div class="exp-table-wrap" id="employee-table"></div>
+      </div>
+
+      <!-- Validate -->
+      <div class="exp-panel" id="panel-validate">
+        <h2 class="exp-panel__title">Validate a compliance ID</h2>
+        <p class="exp-panel__sub">Pick a field and enter a value. Regium validates it using real checksum algorithms.</p>
+        <div class="exp-validate">
+          <div class="exp-validate__row">
+            <div class="exp-field">
+              <label for="val-field">Field</label>
+              <select id="val-field" class="exp-select"></select>
+            </div>
+            <div class="exp-field">
+              <label for="val-value">Value</label>
+              <input type="text" id="val-value" class="exp-input" placeholder="Enter value..." />
+            </div>
+            <button id="val-btn" class="btn btn--primary" type="button">Validate</button>
+          </div>
+          <div class="exp-validate__result" id="val-result"></div>
+        </div>
+      </div>
+
+      <!-- Payroll -->
+      <div class="exp-panel" id="panel-payroll">
+        <h2 class="exp-panel__title">Payroll & tax snapshot</h2>
+        <p class="exp-panel__sub">Key payroll rules, contributions, and tax regime for this jurisdiction.</p>
+        <div class="exp-grid" id="payroll-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">© 2026 Regium Contributors · Apache-2.0 License · <a href="/">Back to home</a></p>
+    </div>
+  </footer>
+
+  <script src="/experience.js"></script>
+</body>
+</html>

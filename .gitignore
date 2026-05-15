@@ -30,6 +30,11 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+.npmrc.local
+.npmrc.tokens
+*.token
+*.tokens
+secrets/
 
 # Misc
 .cache/
