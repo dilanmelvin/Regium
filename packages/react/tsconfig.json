@@ -1,1 +1,9 @@
-{ "extends": "../../tools/tsconfig/react.json", "include": ["src/**/*"] }
+{
+  "extends": "../../tools/tsconfig/react.json",
+  "compilerOptions": {
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}

@@ -1,9 +1,9 @@
 // Install tab switcher
 const commands = {
-  npm: "npm install @regium/core @regium/countries",
-  pnpm: "pnpm add @regium/core @regium/countries",
-  yarn: "yarn add @regium/core @regium/countries",
-  bun: "bun add @regium/core @regium/countries",
+  npm: "npm install regium @regium/data",
+  pnpm: "pnpm add regium @regium/data",
+  yarn: "yarn add regium @regium/data",
+  bun: "bun add regium @regium/data",
 };
 
 document.querySelectorAll(".install__tab").forEach((tab) => {
@@ -22,7 +22,9 @@ document.querySelector(".install__copy")?.addEventListener("click", () => {
     navigator.clipboard.writeText(code).then(() => {
       const btn = document.querySelector(".install__copy");
       btn.textContent = "✓";
-      setTimeout(() => (btn.textContent = "📋"), 1500);
+      setTimeout(() => {
+        btn.textContent = "📋";
+      }, 1500);
     });
   }
 });

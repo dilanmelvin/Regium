@@ -5,7 +5,10 @@
   text-align: center;
 }
 
-.exp-hero__inner { max-width: 800px; margin: 0 auto; }
+.exp-hero__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
 .exp-hero__title {
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 800;
@@ -90,7 +93,10 @@
   line-height: 1.6;
 }
 
-.exp-picker__info strong { color: var(--text); font-weight: 600; }
+.exp-picker__info strong {
+  color: var(--text);
+  font-weight: 600;
+}
 
 /* Tabs */
 .exp-tabs {
@@ -121,8 +127,14 @@
   transition: all 150ms;
 }
 
-.exp-tab:hover { color: var(--text); background: var(--surface); }
-.exp-tab.active { background: var(--accent); color: #fff; }
+.exp-tab:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+.exp-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
 
 /* Content */
 .exp-content {
@@ -134,8 +146,12 @@
   margin: 0 auto;
 }
 
-.exp-panel { display: none; }
-.exp-panel.active { display: block; }
+.exp-panel {
+  display: none;
+}
+.exp-panel.active {
+  display: block;
+}
 
 .exp-panel__title {
   font-size: 22px;
@@ -214,9 +230,17 @@
   background: var(--bg-subtle);
 }
 
-.exp-table tr:last-child td { border-bottom: none; }
-.exp-table td { color: var(--text-muted); }
-.exp-table .mono { font-family: var(--mono); font-size: 13px; color: var(--text); }
+.exp-table tr:last-child td {
+  border-bottom: none;
+}
+.exp-table td {
+  color: var(--text-muted);
+}
+.exp-table .mono {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+}
 .exp-table .badge {
   display: inline-block;
   padding: 2px 8px;
@@ -224,9 +248,18 @@
   font-size: 11px;
   font-weight: 500;
 }
-.exp-table .badge--required { background: rgba(239, 68, 68, 0.15); color: #f87171; }
-.exp-table .badge--optional { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
-.exp-table .badge--pii { background: rgba(234, 179, 8, 0.15); color: #facc15; }
+.exp-table .badge--required {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+.exp-table .badge--optional {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+.exp-table .badge--pii {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+}
 
 /* Validate */
 .exp-validate__row {
@@ -237,7 +270,10 @@
   margin-bottom: 16px;
 }
 
-.exp-field { flex: 1; min-width: 200px; }
+.exp-field {
+  flex: 1;
+  min-width: 200px;
+}
 .exp-field label {
   display: block;
   font-size: 13px;
@@ -291,11 +327,17 @@
 }
 
 @media (max-width: 768px) {
-  .exp-validate__row { flex-direction: column; }
-  .exp-tabs__inner { gap: 2px; }
-  .exp-tab { padding: 8px 14px; font-size: 13px; }
+  .exp-validate__row {
+    flex-direction: column;
+  }
+  .exp-tabs__inner {
+    gap: 2px;
+  }
+  .exp-tab {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
 }
-
 
 /* Payroll section titles */
 .exp-section-title {

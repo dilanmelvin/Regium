@@ -1,5 +1,5 @@
-import type { ValidationResult } from "@regium/types";
 import { useCallback, useState } from "react";
+import type { ValidationResult } from "regium";
 import { useRegium } from "./context.js";
 
 export interface UseValidateResult {

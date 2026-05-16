@@ -1,5 +1,5 @@
-import type { Regium } from "@regium/core";
 import { type ReactNode, createContext, useContext } from "react";
+import type { Regium } from "regium";
 
 const RegiumContext = createContext<Regium | null>(null);
 
