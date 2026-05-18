@@ -44,7 +44,7 @@ importers:
 
   packages/data:
     dependencies:
-      regium:
+      '@regium/core':
         specifier: workspace:*
         version: link:../regium
     devDependencies:
@@ -60,7 +60,7 @@ importers:
 
   packages/react:
     dependencies:
-      regium:
+      '@regium/core':
         specifier: workspace:*
         version: link:../regium
     devDependencies:

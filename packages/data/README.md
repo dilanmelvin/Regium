@@ -9,13 +9,13 @@
 ## Install
 
 ```bash
-npm install regium @regium/data
+npm install @regium/core @regium/data
 ```
 
 ## Usage
 
 ```ts
-import { createRegium } from "regium";
+import { createRegium } from "@regium/core";
 import { allCountries } from "@regium/data";
 
 const regium = createRegium({ plugins: allCountries });

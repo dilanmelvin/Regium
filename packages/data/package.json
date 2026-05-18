@@ -522,7 +522,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "regium": "workspace:*"
+    "@regium/core": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.3.0",
@@ -532,7 +532,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["regium", "country-data", "metadata", "iso-3166"],
+  "keywords": ["@regium/core", "country-data", "metadata", "iso-3166"],
   "repository": {
     "type": "git",
     "url": "https://github.com/dilanmelvin/Regium.git"

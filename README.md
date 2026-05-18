@@ -15,7 +15,7 @@
 
 **One TypeScript SDK for tax IDs, payroll rules, banking formats, labor law, and immigration metadata across every country in the world.**
 
-[![npm](https://img.shields.io/npm/v/regium?label=regium&color=0f172a)](https://www.npmjs.com/package/regium)
+[![npm](https://img.shields.io/npm/v/regium?label=regium&color=0f172a)](https://www.npmjs.com/package/@regium/core)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6.svg)](https://www.typescriptlang.org/)
 [![Countries](https://img.shields.io/badge/countries-218-success.svg)](#country-coverage)
@@ -48,16 +48,16 @@ Just **2 packages**, with rich subpath exports inside.
 
 ```bash
 # All-in setup (most common)
-npm install regium @regium/data
+npm install @regium/core @regium/data
 
 # pnpm
-pnpm add regium @regium/data
+pnpm add @regium/core @regium/data
 
 # yarn
-yarn add regium @regium/data
+yarn add @regium/core @regium/data
 
 # bun
-bun add regium @regium/data
+bun add @regium/core @regium/data
 ```
 
 For React apps, also:
@@ -71,7 +71,7 @@ npm install @regium/react
 ## Quick start
 
 ```ts
-import { createRegium } from "regium";
+import { createRegium } from "@regium/core";
 import { allCountries } from "@regium/data";
 
 const regium = createRegium({ plugins: allCountries });
@@ -170,7 +170,7 @@ Where `<iso>` ∈ `in, us, uk, de, fr, sg, ae, br, au, ca` and `<domain>` ∈ `c
 ## React integration
 
 ```tsx
-import { createRegium } from "regium";
+import { createRegium } from "@regium/core";
 import { allCountries } from "@regium/data";
 import { RegiumProvider, useRegiumForm } from "@regium/react";
 

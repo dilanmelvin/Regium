@@ -109,7 +109,7 @@ log("  ✓ All packages installed");
 logStep(4, "Running smoke tests against installed packages");
 
 const testScript = `
-import { createRegium } from "regium";
+import { createRegium } from "@regium/core";
 import { allCountries } from "@regium/data";
 
 const r = createRegium({ plugins: allCountries });

@@ -1,4 +1,4 @@
-import type { CountryPack, MetadataEnvelope } from "regium";
+import type { CountryPack, MetadataEnvelope } from "@regium/core";
 import type {
   BankingRules,
   CompanyFields,
@@ -9,8 +9,8 @@ import type {
   Localization,
   PayrollRules,
   TaxRules,
-} from "regium";
-import { ukValidators } from "regium";
+} from "@regium/core";
+import { ukValidators } from "@regium/core";
 
 const country: MetadataEnvelope<Country> = {
   id: "country.gb.v2025",

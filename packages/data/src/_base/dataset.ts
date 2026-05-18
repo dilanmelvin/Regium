@@ -1,4 +1,4 @@
-import type { PayrollRegion } from "regium";
+import type { PayrollRegion } from "@regium/core";
 
 /**
  * Compact base record for every country / territory in the world.

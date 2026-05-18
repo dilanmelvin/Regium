@@ -11,7 +11,7 @@ import sg from "./sg/index.js";
 import uk from "./uk/index.js";
 import us from "./us/index.js";
 
-import type { CountryPack } from "regium";
+import type { CountryPack } from "@regium/core";
 
 export const detailedCountries: CountryPack[] = [india, us, uk, de, fr, sg, ae, br, au, ca];
 

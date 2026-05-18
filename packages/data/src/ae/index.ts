@@ -1,4 +1,4 @@
-import type { CountryPack, MetadataEnvelope } from "regium";
+import type { CountryPack, MetadataEnvelope } from "@regium/core";
 import type {
   BankingRules,
   CompanyFields,
@@ -9,8 +9,8 @@ import type {
   Localization,
   PayrollRules,
   TaxRules,
-} from "regium";
-import { aeValidators } from "regium";
+} from "@regium/core";
+import { aeValidators } from "@regium/core";
 
 const country: MetadataEnvelope<Country> = {
   id: "country.ae.v2025",

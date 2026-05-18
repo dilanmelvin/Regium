@@ -22,7 +22,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "regium": "workspace:*"
+    "@regium/core": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18.0.0"

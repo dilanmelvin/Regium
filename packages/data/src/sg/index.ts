@@ -1,4 +1,4 @@
-import type { CountryPack, MetadataEnvelope } from "regium";
+import type { CountryPack, MetadataEnvelope } from "@regium/core";
 import type {
   BankingRules,
   CompanyFields,
@@ -9,8 +9,8 @@ import type {
   Localization,
   PayrollRules,
   TaxRules,
-} from "regium";
-import { sgValidators } from "regium";
+} from "@regium/core";
+import { sgValidators } from "@regium/core";
 
 const country: MetadataEnvelope<Country> = {
   id: "country.sg.v2025",

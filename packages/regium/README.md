@@ -4,13 +4,13 @@
 
 **One TypeScript SDK for tax IDs, payroll, banking, labor law, and immigration metadata across 218 countries.**
 
-[![npm](https://img.shields.io/npm/v/regium?color=0f172a)](https://www.npmjs.com/package/regium)
+[![npm](https://img.shields.io/npm/v/regium?color=0f172a)](https://www.npmjs.com/package/@regium/core)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](../../LICENSE)
 
 ## Install
 
 ```bash
-npm install regium @regium/data
+npm install @regium/core @regium/data
 ```
 
 For React apps, also install `@regium/react`.
@@ -18,7 +18,7 @@ For React apps, also install `@regium/react`.
 ## Quick start
 
 ```ts
-import { createRegium } from "regium";
+import { createRegium } from "@regium/core";
 import { allCountries } from "@regium/data";
 
 const regium = createRegium({ plugins: allCountries });

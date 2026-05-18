@@ -1,9 +1,9 @@
 // Install tab switcher
 const commands = {
-  npm: "npm install regium @regium/data",
-  pnpm: "pnpm add regium @regium/data",
-  yarn: "yarn add regium @regium/data",
-  bun: "bun add regium @regium/data",
+  npm: "npm install @regium/core @regium/data",
+  pnpm: "pnpm add @regium/core @regium/data",
+  yarn: "yarn add @regium/core @regium/data",
+  bun: "bun add @regium/core @regium/data",
 };
 
 document.querySelectorAll(".install__tab").forEach((tab) => {

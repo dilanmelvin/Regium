@@ -10,7 +10,7 @@ import type {
   MetadataEnvelope,
   PayrollRules,
   TaxRules,
-} from "regium";
+} from "@regium/core";
 import { COUNTRIES, type CountryRow } from "./dataset.js";
 
 const EFFECTIVE_FROM = "2025-01-01";

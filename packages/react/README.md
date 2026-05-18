@@ -7,13 +7,13 @@
 ## Install
 
 ```bash
-npm install regium @regium/data @regium/react react
+npm install @regium/core @regium/data @regium/react react
 ```
 
 ## Usage
 
 ```tsx
-import { createRegium } from "regium";
+import { createRegium } from "@regium/core";
 import { allCountries } from "@regium/data";
 import { RegiumProvider, useRegiumForm, useValidate } from "@regium/react";
 

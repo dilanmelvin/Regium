@@ -24,7 +24,9 @@
     "docs": "pnpm --filter @regium/docs dev",
     "smoke-test": "node scripts/smoke-test.mjs",
     "publish:dry": "node scripts/publish.mjs --dry-run",
-    "publish:npm": "node scripts/publish.mjs"
+    "publish:npm": "node scripts/publish.mjs",
+    "cleanup:old": "node scripts/cleanup-old-packages.mjs",
+    "cleanup:dry": "node scripts/cleanup-old-packages.mjs --dry-run"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

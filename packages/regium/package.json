@@ -1,5 +1,5 @@
 {
-  "name": "regium",
+  "name": "@regium/core",
   "version": "1.0.0",
   "description": "Global workforce compliance infrastructure for developers. Tax IDs, payroll, banking, labor law for 218 countries.",
   "license": "Apache-2.0",
