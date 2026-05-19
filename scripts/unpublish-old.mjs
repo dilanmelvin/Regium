@@ -40,7 +40,7 @@ const OLD_PACKAGES = [
 
 const token = process.env.NPM_TOKEN;
 if (!token || !token.startsWith("npm_")) {
-  console.error("✗ Set NPM_TOKEN first: $env:NPM_TOKEN = \"npm_xxx...\"");
+  console.error('✗ Set NPM_TOKEN first: $env:NPM_TOKEN = "npm_xxx..."');
   process.exit(1);
 }
 
@@ -51,12 +51,16 @@ if (existsSync(npmrcPath)) {
   hadExisting = true;
   writeFileSync(backupPath, readFileSync(npmrcPath, "utf8"));
 }
-writeFileSync(npmrcPath, [
-  `//registry.npmjs.org/:_authToken=${token}`,
-  "registry=https://registry.npmjs.org/",
-  "always-auth=true",
-  "",
-].join("\n"), { mode: 0o600 });
+writeFileSync(
+  npmrcPath,
+  [
+    `//registry.npmjs.org/:_authToken=${token}`,
+    "registry=https://registry.npmjs.org/",
+    "always-auth=true",
+    "",
+  ].join("\n"),
+  { mode: 0o600 },
+);
 
 function cleanup() {
   try {
@@ -94,7 +98,10 @@ for (const pkg of OLD_PACKAGES) {
     console.log("✓ unpublished");
     unpublished++;
   } else {
-    const err = r.stderr.toString().split("\n").find((l) => l.includes("npm error"));
+    const err = r.stderr
+      .toString()
+      .split("\n")
+      .find((l) => l.includes("npm error"));
     const reason = err ? err.replace(/^npm error\s*/, "").substring(0, 80) : "unknown";
     console.log(`✗ ${reason}`);
     failed++;

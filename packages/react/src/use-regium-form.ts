@@ -1,6 +1,6 @@
-import { useCallback, useMemo, useState } from "react";
 import { buildFormFromFields, validateForm } from "@regium/core";
 import type { ComplianceField, FormSchema } from "@regium/core";
+import { useCallback, useMemo, useState } from "react";
 import { useRegium } from "./context.js";
 
 export interface UseRegiumFormOptions {

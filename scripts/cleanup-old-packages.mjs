@@ -48,7 +48,8 @@ const OLD_PACKAGES = [
 ];
 
 const DEPRECATION_MSG_MAP = {
-  "@regium/types": "Replaced by @regium/core/types in v1+. See https://github.com/dilanmelvin/Regium",
+  "@regium/types":
+    "Replaced by @regium/core/types in v1+. See https://github.com/dilanmelvin/Regium",
   "@regium/utils": "Replaced by @regium/core/utils in v1+.",
   "@regium/validators": "Replaced by @regium/core/validators in v1+.",
   "@regium/forms": "Replaced by @regium/core/forms in v1+.",
@@ -74,7 +75,7 @@ const DEPRECATION_MSG_MAP = {
 const token = process.env.NPM_TOKEN;
 if (!token || !token.startsWith("npm_")) {
   console.error("✗ NPM_TOKEN environment variable is missing or invalid.");
-  console.error("  Set it: $env:NPM_TOKEN = \"npm_xxx...\"");
+  console.error('  Set it: $env:NPM_TOKEN = "npm_xxx..."');
   process.exit(1);
 }
 
@@ -88,12 +89,16 @@ if (existsSync(npmrcPath)) {
   writeFileSync(backupPath, readFileSync(npmrcPath, "utf8"));
 }
 
-writeFileSync(npmrcPath, [
-  `//registry.npmjs.org/:_authToken=${token}`,
-  "registry=https://registry.npmjs.org/",
-  "always-auth=true",
-  "",
-].join("\n"), { mode: 0o600 });
+writeFileSync(
+  npmrcPath,
+  [
+    `//registry.npmjs.org/:_authToken=${token}`,
+    "registry=https://registry.npmjs.org/",
+    "always-auth=true",
+    "",
+  ].join("\n"),
+  { mode: 0o600 },
+);
 
 function cleanup() {
   try {
@@ -129,7 +134,7 @@ if (whoami.status !== 0) {
   console.error("\nFix: Generate a new Classic Automation Token at:");
   console.error("  https://www.npmjs.com/settings/~/tokens");
   console.error("\nThen set it:");
-  console.error("  $env:NPM_TOKEN = \"npm_xxx...\"");
+  console.error('  $env:NPM_TOKEN = "npm_xxx..."');
   console.error("  pnpm cleanup:old\n");
   process.exit(1);
 }
@@ -201,7 +206,12 @@ for (const pkg of OLD_PACKAGES) {
         const r = npm(["deprecate", `${pkg}@${v}`, DEPRECATION_MSG_MAP[pkg]], { silent: true });
         if (r.status !== 0) {
           allOk = false;
-          lastError = r.stderr.toString().split("\n").filter((l) => l.includes("npm error")).slice(0, 2).join(" ");
+          lastError = r.stderr
+            .toString()
+            .split("\n")
+            .filter((l) => l.includes("npm error"))
+            .slice(0, 2)
+            .join(" ");
         }
       }
 
