@@ -78,7 +78,7 @@
           <span class="code__filename">app.ts</span>
         </div>
         <pre class="code__body"><code><span class="hl-kw">import</span> { createRegium } <span class="hl-kw">from</span> <span class="hl-str">"@regium/core"</span>;
-<span class="hl-kw">import</span> { allCountries } <span class="hl-kw">from</span> <span class="hl-str">"@regium/countries"</span>;
+<span class="hl-kw">import</span> { allCountries } <span class="hl-kw">from</span> <span class="hl-str">"@regium/data"</span>;
 
 <span class="hl-kw">const</span> regium = <span class="hl-fn">createRegium</span>({ plugins: allCountries });
 
@@ -169,7 +169,7 @@ regium.<span class="hl-fn">validate</span>({ country: <span class="hl-str">"IN"<
         <button class="install__tab" data-pm="bun">bun</button>
       </div>
       <div class="install__code">
-        <pre id="install-code"><code>npm install @regium/core @regium/countries</code></pre>
+        <pre id="install-code"><code>npm install @regium/core @regium/data</code></pre>
         <button class="install__copy" title="Copy to clipboard">📋</button>
       </div>
       <p class="install__hint">This gives you all 218 countries. Or install individual packs: <code>@regium/country-in</code>, <code>@regium/country-us</code>, etc.</p>
@@ -319,7 +319,7 @@ regium.<span class="hl-fn">validate</span>({ country: <span class="hl-str">"IN"<
       <h2 class="cta__title">Start building with Regium</h2>
       <p class="cta__sub">Open source. Apache-2.0. Free forever.</p>
       <div class="cta__actions">
-        <a href="#install" class="btn btn--primary btn--lg">npm install @regium/core</a>
+        <a href="#install" class="btn btn--primary btn--lg">npm install regium</a>
         <a href="https://github.com/" class="btn btn--ghost btn--lg" target="_blank" rel="noreferrer">Star on GitHub</a>
       </div>
     </div>

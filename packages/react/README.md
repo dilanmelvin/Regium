@@ -1,44 +1,64 @@
 # @regium/react
 
-React adapter for Regium — provides `RegiumProvider`, `useRegiumForm`, and `useValidate` hooks.
+> React adapter for the [Regium](https://github.com/dilanmelvin/Regium) ecosystem.
 
-Part of the [Regium](../../README.md) ecosystem — global workforce compliance infrastructure for developers.
+[![npm](https://img.shields.io/npm/v/@regium/react?color=0f172a)](https://www.npmjs.com/package/@regium/react)
 
 ## Install
 
 ```bash
-npm install @regium/react
+npm install @regium/core @regium/data @regium/react react
 ```
 
 ## Usage
 
 ```tsx
-import { RegiumProvider, useRegiumForm } from "@regium/react";
 import { createRegium } from "@regium/core";
+import { allCountries } from "@regium/data";
+import { RegiumProvider, useRegiumForm, useValidate } from "@regium/react";
 
-const regium = createRegium({ countries: [countryIN] });
+const regium = createRegium({ plugins: allCountries });
 
 function App() {
   return (
-    <RegiumProvider instance={regium}>
-      <EmployeeForm />
+    <RegiumProvider regium={regium}>
+      <EmployeeForm country="IN" />
     </RegiumProvider>
   );
 }
 
-function EmployeeForm() {
-  const { fields, validate, handleSubmit } = useRegiumForm("employee-onboarding");
-  return <form onSubmit={handleSubmit}>{/* render fields */}</form>;
+function EmployeeForm({ country }: { country: string }) {
+  const form = useRegiumForm({ country, audience: "employee" });
+
+  return (
+    <form onSubmit={(e) => { e.preventDefault(); form.validate(); }}>
+      {form.fields.map((f) => (
+        <div key={f.id}>
+          <label>{typeof f.label === "string" ? f.label : f.label.en}</label>
+          <input value={form.values[f.id] ?? ""}
+            onChange={(e) => form.setValue(f.id, e.target.value)} />
+          {form.errors[f.id]?.map((msg, i) => <span key={i}>{msg}</span>)}
+        </div>
+      ))}
+      <button type="submit">Validate</button>
+    </form>
+  );
 }
 ```
 
-## Exports
+## Hooks
 
-| Hook / Component | Description |
-| --- | --- |
-| `RegiumProvider` | Context provider for a Regium instance |
-| `useRegiumForm` | Schema-driven form hook |
-| `useValidate` | Standalone validation hook |
+| Hook | Purpose |
+|------|---------|
+| `useRegium()` | Access the Regium instance from context |
+| `useRegiumForm({ country, audience })` | Build a form from country compliance fields with state, validation, errors |
+| `useValidate()` | Imperative validation hook |
+
+## Components
+
+| Component | Purpose |
+|-----------|---------|
+| `<RegiumProvider regium={...}>` | Provides the Regium instance to descendants |
 
 ## License
 

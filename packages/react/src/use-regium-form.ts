@@ -1,5 +1,5 @@
-import { buildFormFromFields, validateForm } from "@regium/forms";
-import type { ComplianceField, FormSchema } from "@regium/types";
+import { buildFormFromFields, validateForm } from "@regium/core";
+import type { ComplianceField, FormSchema } from "@regium/core";
 import { useCallback, useMemo, useState } from "react";
 import { useRegium } from "./context.js";
 

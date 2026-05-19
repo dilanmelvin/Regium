@@ -1,0 +1,542 @@
+{
+  "name": "@regium/data",
+  "version": "1.0.0",
+  "description": "Country metadata for the Regium ecosystem — 218 countries, 10 with full payroll/tax data.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./in": {
+      "types": "./dist/in/index.d.ts",
+      "import": "./dist/in/index.js",
+      "require": "./dist/in/index.cjs"
+    },
+    "./in/country": {
+      "types": "./dist/in/country.d.ts",
+      "import": "./dist/in/country.js",
+      "require": "./dist/in/country.cjs"
+    },
+    "./in/company": {
+      "types": "./dist/in/company.d.ts",
+      "import": "./dist/in/company.js",
+      "require": "./dist/in/company.cjs"
+    },
+    "./in/employee": {
+      "types": "./dist/in/employee.d.ts",
+      "import": "./dist/in/employee.js",
+      "require": "./dist/in/employee.cjs"
+    },
+    "./in/payroll": {
+      "types": "./dist/in/payroll.d.ts",
+      "import": "./dist/in/payroll.js",
+      "require": "./dist/in/payroll.cjs"
+    },
+    "./in/tax": {
+      "types": "./dist/in/tax.d.ts",
+      "import": "./dist/in/tax.js",
+      "require": "./dist/in/tax.cjs"
+    },
+    "./in/labor": {
+      "types": "./dist/in/labor.d.ts",
+      "import": "./dist/in/labor.js",
+      "require": "./dist/in/labor.cjs"
+    },
+    "./in/banking": {
+      "types": "./dist/in/banking.d.ts",
+      "import": "./dist/in/banking.js",
+      "require": "./dist/in/banking.cjs"
+    },
+    "./in/localization": {
+      "types": "./dist/in/localization.d.ts",
+      "import": "./dist/in/localization.js",
+      "require": "./dist/in/localization.cjs"
+    },
+    "./in/immigration": {
+      "types": "./dist/in/immigration.d.ts",
+      "import": "./dist/in/immigration.js",
+      "require": "./dist/in/immigration.cjs"
+    },
+    "./us": {
+      "types": "./dist/us/index.d.ts",
+      "import": "./dist/us/index.js",
+      "require": "./dist/us/index.cjs"
+    },
+    "./us/country": {
+      "types": "./dist/us/country.d.ts",
+      "import": "./dist/us/country.js",
+      "require": "./dist/us/country.cjs"
+    },
+    "./us/company": {
+      "types": "./dist/us/company.d.ts",
+      "import": "./dist/us/company.js",
+      "require": "./dist/us/company.cjs"
+    },
+    "./us/employee": {
+      "types": "./dist/us/employee.d.ts",
+      "import": "./dist/us/employee.js",
+      "require": "./dist/us/employee.cjs"
+    },
+    "./us/payroll": {
+      "types": "./dist/us/payroll.d.ts",
+      "import": "./dist/us/payroll.js",
+      "require": "./dist/us/payroll.cjs"
+    },
+    "./us/tax": {
+      "types": "./dist/us/tax.d.ts",
+      "import": "./dist/us/tax.js",
+      "require": "./dist/us/tax.cjs"
+    },
+    "./us/labor": {
+      "types": "./dist/us/labor.d.ts",
+      "import": "./dist/us/labor.js",
+      "require": "./dist/us/labor.cjs"
+    },
+    "./us/banking": {
+      "types": "./dist/us/banking.d.ts",
+      "import": "./dist/us/banking.js",
+      "require": "./dist/us/banking.cjs"
+    },
+    "./us/localization": {
+      "types": "./dist/us/localization.d.ts",
+      "import": "./dist/us/localization.js",
+      "require": "./dist/us/localization.cjs"
+    },
+    "./us/immigration": {
+      "types": "./dist/us/immigration.d.ts",
+      "import": "./dist/us/immigration.js",
+      "require": "./dist/us/immigration.cjs"
+    },
+    "./uk": {
+      "types": "./dist/uk/index.d.ts",
+      "import": "./dist/uk/index.js",
+      "require": "./dist/uk/index.cjs"
+    },
+    "./uk/country": {
+      "types": "./dist/uk/country.d.ts",
+      "import": "./dist/uk/country.js",
+      "require": "./dist/uk/country.cjs"
+    },
+    "./uk/company": {
+      "types": "./dist/uk/company.d.ts",
+      "import": "./dist/uk/company.js",
+      "require": "./dist/uk/company.cjs"
+    },
+    "./uk/employee": {
+      "types": "./dist/uk/employee.d.ts",
+      "import": "./dist/uk/employee.js",
+      "require": "./dist/uk/employee.cjs"
+    },
+    "./uk/payroll": {
+      "types": "./dist/uk/payroll.d.ts",
+      "import": "./dist/uk/payroll.js",
+      "require": "./dist/uk/payroll.cjs"
+    },
+    "./uk/tax": {
+      "types": "./dist/uk/tax.d.ts",
+      "import": "./dist/uk/tax.js",
+      "require": "./dist/uk/tax.cjs"
+    },
+    "./uk/labor": {
+      "types": "./dist/uk/labor.d.ts",
+      "import": "./dist/uk/labor.js",
+      "require": "./dist/uk/labor.cjs"
+    },
+    "./uk/banking": {
+      "types": "./dist/uk/banking.d.ts",
+      "import": "./dist/uk/banking.js",
+      "require": "./dist/uk/banking.cjs"
+    },
+    "./uk/localization": {
+      "types": "./dist/uk/localization.d.ts",
+      "import": "./dist/uk/localization.js",
+      "require": "./dist/uk/localization.cjs"
+    },
+    "./uk/immigration": {
+      "types": "./dist/uk/immigration.d.ts",
+      "import": "./dist/uk/immigration.js",
+      "require": "./dist/uk/immigration.cjs"
+    },
+    "./de": {
+      "types": "./dist/de/index.d.ts",
+      "import": "./dist/de/index.js",
+      "require": "./dist/de/index.cjs"
+    },
+    "./de/country": {
+      "types": "./dist/de/country.d.ts",
+      "import": "./dist/de/country.js",
+      "require": "./dist/de/country.cjs"
+    },
+    "./de/company": {
+      "types": "./dist/de/company.d.ts",
+      "import": "./dist/de/company.js",
+      "require": "./dist/de/company.cjs"
+    },
+    "./de/employee": {
+      "types": "./dist/de/employee.d.ts",
+      "import": "./dist/de/employee.js",
+      "require": "./dist/de/employee.cjs"
+    },
+    "./de/payroll": {
+      "types": "./dist/de/payroll.d.ts",
+      "import": "./dist/de/payroll.js",
+      "require": "./dist/de/payroll.cjs"
+    },
+    "./de/tax": {
+      "types": "./dist/de/tax.d.ts",
+      "import": "./dist/de/tax.js",
+      "require": "./dist/de/tax.cjs"
+    },
+    "./de/labor": {
+      "types": "./dist/de/labor.d.ts",
+      "import": "./dist/de/labor.js",
+      "require": "./dist/de/labor.cjs"
+    },
+    "./de/banking": {
+      "types": "./dist/de/banking.d.ts",
+      "import": "./dist/de/banking.js",
+      "require": "./dist/de/banking.cjs"
+    },
+    "./de/localization": {
+      "types": "./dist/de/localization.d.ts",
+      "import": "./dist/de/localization.js",
+      "require": "./dist/de/localization.cjs"
+    },
+    "./de/immigration": {
+      "types": "./dist/de/immigration.d.ts",
+      "import": "./dist/de/immigration.js",
+      "require": "./dist/de/immigration.cjs"
+    },
+    "./fr": {
+      "types": "./dist/fr/index.d.ts",
+      "import": "./dist/fr/index.js",
+      "require": "./dist/fr/index.cjs"
+    },
+    "./fr/country": {
+      "types": "./dist/fr/country.d.ts",
+      "import": "./dist/fr/country.js",
+      "require": "./dist/fr/country.cjs"
+    },
+    "./fr/company": {
+      "types": "./dist/fr/company.d.ts",
+      "import": "./dist/fr/company.js",
+      "require": "./dist/fr/company.cjs"
+    },
+    "./fr/employee": {
+      "types": "./dist/fr/employee.d.ts",
+      "import": "./dist/fr/employee.js",
+      "require": "./dist/fr/employee.cjs"
+    },
+    "./fr/payroll": {
+      "types": "./dist/fr/payroll.d.ts",
+      "import": "./dist/fr/payroll.js",
+      "require": "./dist/fr/payroll.cjs"
+    },
+    "./fr/tax": {
+      "types": "./dist/fr/tax.d.ts",
+      "import": "./dist/fr/tax.js",
+      "require": "./dist/fr/tax.cjs"
+    },
+    "./fr/labor": {
+      "types": "./dist/fr/labor.d.ts",
+      "import": "./dist/fr/labor.js",
+      "require": "./dist/fr/labor.cjs"
+    },
+    "./fr/banking": {
+      "types": "./dist/fr/banking.d.ts",
+      "import": "./dist/fr/banking.js",
+      "require": "./dist/fr/banking.cjs"
+    },
+    "./fr/localization": {
+      "types": "./dist/fr/localization.d.ts",
+      "import": "./dist/fr/localization.js",
+      "require": "./dist/fr/localization.cjs"
+    },
+    "./fr/immigration": {
+      "types": "./dist/fr/immigration.d.ts",
+      "import": "./dist/fr/immigration.js",
+      "require": "./dist/fr/immigration.cjs"
+    },
+    "./sg": {
+      "types": "./dist/sg/index.d.ts",
+      "import": "./dist/sg/index.js",
+      "require": "./dist/sg/index.cjs"
+    },
+    "./sg/country": {
+      "types": "./dist/sg/country.d.ts",
+      "import": "./dist/sg/country.js",
+      "require": "./dist/sg/country.cjs"
+    },
+    "./sg/company": {
+      "types": "./dist/sg/company.d.ts",
+      "import": "./dist/sg/company.js",
+      "require": "./dist/sg/company.cjs"
+    },
+    "./sg/employee": {
+      "types": "./dist/sg/employee.d.ts",
+      "import": "./dist/sg/employee.js",
+      "require": "./dist/sg/employee.cjs"
+    },
+    "./sg/payroll": {
+      "types": "./dist/sg/payroll.d.ts",
+      "import": "./dist/sg/payroll.js",
+      "require": "./dist/sg/payroll.cjs"
+    },
+    "./sg/tax": {
+      "types": "./dist/sg/tax.d.ts",
+      "import": "./dist/sg/tax.js",
+      "require": "./dist/sg/tax.cjs"
+    },
+    "./sg/labor": {
+      "types": "./dist/sg/labor.d.ts",
+      "import": "./dist/sg/labor.js",
+      "require": "./dist/sg/labor.cjs"
+    },
+    "./sg/banking": {
+      "types": "./dist/sg/banking.d.ts",
+      "import": "./dist/sg/banking.js",
+      "require": "./dist/sg/banking.cjs"
+    },
+    "./sg/localization": {
+      "types": "./dist/sg/localization.d.ts",
+      "import": "./dist/sg/localization.js",
+      "require": "./dist/sg/localization.cjs"
+    },
+    "./sg/immigration": {
+      "types": "./dist/sg/immigration.d.ts",
+      "import": "./dist/sg/immigration.js",
+      "require": "./dist/sg/immigration.cjs"
+    },
+    "./ae": {
+      "types": "./dist/ae/index.d.ts",
+      "import": "./dist/ae/index.js",
+      "require": "./dist/ae/index.cjs"
+    },
+    "./ae/country": {
+      "types": "./dist/ae/country.d.ts",
+      "import": "./dist/ae/country.js",
+      "require": "./dist/ae/country.cjs"
+    },
+    "./ae/company": {
+      "types": "./dist/ae/company.d.ts",
+      "import": "./dist/ae/company.js",
+      "require": "./dist/ae/company.cjs"
+    },
+    "./ae/employee": {
+      "types": "./dist/ae/employee.d.ts",
+      "import": "./dist/ae/employee.js",
+      "require": "./dist/ae/employee.cjs"
+    },
+    "./ae/payroll": {
+      "types": "./dist/ae/payroll.d.ts",
+      "import": "./dist/ae/payroll.js",
+      "require": "./dist/ae/payroll.cjs"
+    },
+    "./ae/tax": {
+      "types": "./dist/ae/tax.d.ts",
+      "import": "./dist/ae/tax.js",
+      "require": "./dist/ae/tax.cjs"
+    },
+    "./ae/labor": {
+      "types": "./dist/ae/labor.d.ts",
+      "import": "./dist/ae/labor.js",
+      "require": "./dist/ae/labor.cjs"
+    },
+    "./ae/banking": {
+      "types": "./dist/ae/banking.d.ts",
+      "import": "./dist/ae/banking.js",
+      "require": "./dist/ae/banking.cjs"
+    },
+    "./ae/localization": {
+      "types": "./dist/ae/localization.d.ts",
+      "import": "./dist/ae/localization.js",
+      "require": "./dist/ae/localization.cjs"
+    },
+    "./ae/immigration": {
+      "types": "./dist/ae/immigration.d.ts",
+      "import": "./dist/ae/immigration.js",
+      "require": "./dist/ae/immigration.cjs"
+    },
+    "./br": {
+      "types": "./dist/br/index.d.ts",
+      "import": "./dist/br/index.js",
+      "require": "./dist/br/index.cjs"
+    },
+    "./br/country": {
+      "types": "./dist/br/country.d.ts",
+      "import": "./dist/br/country.js",
+      "require": "./dist/br/country.cjs"
+    },
+    "./br/company": {
+      "types": "./dist/br/company.d.ts",
+      "import": "./dist/br/company.js",
+      "require": "./dist/br/company.cjs"
+    },
+    "./br/employee": {
+      "types": "./dist/br/employee.d.ts",
+      "import": "./dist/br/employee.js",
+      "require": "./dist/br/employee.cjs"
+    },
+    "./br/payroll": {
+      "types": "./dist/br/payroll.d.ts",
+      "import": "./dist/br/payroll.js",
+      "require": "./dist/br/payroll.cjs"
+    },
+    "./br/tax": {
+      "types": "./dist/br/tax.d.ts",
+      "import": "./dist/br/tax.js",
+      "require": "./dist/br/tax.cjs"
+    },
+    "./br/labor": {
+      "types": "./dist/br/labor.d.ts",
+      "import": "./dist/br/labor.js",
+      "require": "./dist/br/labor.cjs"
+    },
+    "./br/banking": {
+      "types": "./dist/br/banking.d.ts",
+      "import": "./dist/br/banking.js",
+      "require": "./dist/br/banking.cjs"
+    },
+    "./br/localization": {
+      "types": "./dist/br/localization.d.ts",
+      "import": "./dist/br/localization.js",
+      "require": "./dist/br/localization.cjs"
+    },
+    "./br/immigration": {
+      "types": "./dist/br/immigration.d.ts",
+      "import": "./dist/br/immigration.js",
+      "require": "./dist/br/immigration.cjs"
+    },
+    "./au": {
+      "types": "./dist/au/index.d.ts",
+      "import": "./dist/au/index.js",
+      "require": "./dist/au/index.cjs"
+    },
+    "./au/country": {
+      "types": "./dist/au/country.d.ts",
+      "import": "./dist/au/country.js",
+      "require": "./dist/au/country.cjs"
+    },
+    "./au/company": {
+      "types": "./dist/au/company.d.ts",
+      "import": "./dist/au/company.js",
+      "require": "./dist/au/company.cjs"
+    },
+    "./au/employee": {
+      "types": "./dist/au/employee.d.ts",
+      "import": "./dist/au/employee.js",
+      "require": "./dist/au/employee.cjs"
+    },
+    "./au/payroll": {
+      "types": "./dist/au/payroll.d.ts",
+      "import": "./dist/au/payroll.js",
+      "require": "./dist/au/payroll.cjs"
+    },
+    "./au/tax": {
+      "types": "./dist/au/tax.d.ts",
+      "import": "./dist/au/tax.js",
+      "require": "./dist/au/tax.cjs"
+    },
+    "./au/labor": {
+      "types": "./dist/au/labor.d.ts",
+      "import": "./dist/au/labor.js",
+      "require": "./dist/au/labor.cjs"
+    },
+    "./au/banking": {
+      "types": "./dist/au/banking.d.ts",
+      "import": "./dist/au/banking.js",
+      "require": "./dist/au/banking.cjs"
+    },
+    "./au/localization": {
+      "types": "./dist/au/localization.d.ts",
+      "import": "./dist/au/localization.js",
+      "require": "./dist/au/localization.cjs"
+    },
+    "./au/immigration": {
+      "types": "./dist/au/immigration.d.ts",
+      "import": "./dist/au/immigration.js",
+      "require": "./dist/au/immigration.cjs"
+    },
+    "./ca": {
+      "types": "./dist/ca/index.d.ts",
+      "import": "./dist/ca/index.js",
+      "require": "./dist/ca/index.cjs"
+    },
+    "./ca/country": {
+      "types": "./dist/ca/country.d.ts",
+      "import": "./dist/ca/country.js",
+      "require": "./dist/ca/country.cjs"
+    },
+    "./ca/company": {
+      "types": "./dist/ca/company.d.ts",
+      "import": "./dist/ca/company.js",
+      "require": "./dist/ca/company.cjs"
+    },
+    "./ca/employee": {
+      "types": "./dist/ca/employee.d.ts",
+      "import": "./dist/ca/employee.js",
+      "require": "./dist/ca/employee.cjs"
+    },
+    "./ca/payroll": {
+      "types": "./dist/ca/payroll.d.ts",
+      "import": "./dist/ca/payroll.js",
+      "require": "./dist/ca/payroll.cjs"
+    },
+    "./ca/tax": {
+      "types": "./dist/ca/tax.d.ts",
+      "import": "./dist/ca/tax.js",
+      "require": "./dist/ca/tax.cjs"
+    },
+    "./ca/labor": {
+      "types": "./dist/ca/labor.d.ts",
+      "import": "./dist/ca/labor.js",
+      "require": "./dist/ca/labor.cjs"
+    },
+    "./ca/banking": {
+      "types": "./dist/ca/banking.d.ts",
+      "import": "./dist/ca/banking.js",
+      "require": "./dist/ca/banking.cjs"
+    },
+    "./ca/localization": {
+      "types": "./dist/ca/localization.d.ts",
+      "import": "./dist/ca/localization.js",
+      "require": "./dist/ca/localization.cjs"
+    },
+    "./ca/immigration": {
+      "types": "./dist/ca/immigration.d.ts",
+      "import": "./dist/ca/immigration.js",
+      "require": "./dist/ca/immigration.cjs"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@regium/core": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2",
+    "rimraf": "^6.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": ["@regium/core", "country-data", "metadata", "iso-3166"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dilanmelvin/Regium.git"
+  },
+  "homepage": "https://regium.dev",
+  "bugs": "https://github.com/dilanmelvin/Regium/issues"
+}

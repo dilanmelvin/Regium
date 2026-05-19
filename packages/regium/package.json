@@ -1,0 +1,157 @@
+{
+  "name": "@regium/core",
+  "version": "1.0.0",
+  "description": "Global workforce compliance infrastructure for developers. Tax IDs, payroll, banking, labor law for 218 countries.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
+      "require": "./dist/core/index.cjs"
+    },
+    "./validators": {
+      "types": "./dist/validators/index.d.ts",
+      "import": "./dist/validators/index.js",
+      "require": "./dist/validators/index.cjs"
+    },
+    "./validators/global": {
+      "types": "./dist/validators/global.d.ts",
+      "import": "./dist/validators/global.js",
+      "require": "./dist/validators/global.cjs"
+    },
+    "./validators/in": {
+      "types": "./dist/validators/in.d.ts",
+      "import": "./dist/validators/in.js",
+      "require": "./dist/validators/in.cjs"
+    },
+    "./validators/us": {
+      "types": "./dist/validators/us.d.ts",
+      "import": "./dist/validators/us.js",
+      "require": "./dist/validators/us.cjs"
+    },
+    "./validators/uk": {
+      "types": "./dist/validators/uk.d.ts",
+      "import": "./dist/validators/uk.js",
+      "require": "./dist/validators/uk.cjs"
+    },
+    "./validators/de": {
+      "types": "./dist/validators/de.d.ts",
+      "import": "./dist/validators/de.js",
+      "require": "./dist/validators/de.cjs"
+    },
+    "./validators/fr": {
+      "types": "./dist/validators/fr.d.ts",
+      "import": "./dist/validators/fr.js",
+      "require": "./dist/validators/fr.cjs"
+    },
+    "./validators/sg": {
+      "types": "./dist/validators/sg.d.ts",
+      "import": "./dist/validators/sg.js",
+      "require": "./dist/validators/sg.cjs"
+    },
+    "./validators/ae": {
+      "types": "./dist/validators/ae.d.ts",
+      "import": "./dist/validators/ae.js",
+      "require": "./dist/validators/ae.cjs"
+    },
+    "./validators/br": {
+      "types": "./dist/validators/br.d.ts",
+      "import": "./dist/validators/br.js",
+      "require": "./dist/validators/br.cjs"
+    },
+    "./validators/au": {
+      "types": "./dist/validators/au.d.ts",
+      "import": "./dist/validators/au.js",
+      "require": "./dist/validators/au.cjs"
+    },
+    "./validators/ca": {
+      "types": "./dist/validators/ca.d.ts",
+      "import": "./dist/validators/ca.js",
+      "require": "./dist/validators/ca.cjs"
+    },
+    "./payroll": {
+      "types": "./dist/payroll/index.d.ts",
+      "import": "./dist/payroll/index.js",
+      "require": "./dist/payroll/index.cjs"
+    },
+    "./tax": {
+      "types": "./dist/tax/index.d.ts",
+      "import": "./dist/tax/index.js",
+      "require": "./dist/tax/index.cjs"
+    },
+    "./labor": {
+      "types": "./dist/labor/index.d.ts",
+      "import": "./dist/labor/index.js",
+      "require": "./dist/labor/index.cjs"
+    },
+    "./banking": {
+      "types": "./dist/banking/index.d.ts",
+      "import": "./dist/banking/index.js",
+      "require": "./dist/banking/index.cjs"
+    },
+    "./forms": {
+      "types": "./dist/forms/index.d.ts",
+      "import": "./dist/forms/index.js",
+      "require": "./dist/forms/index.cjs"
+    },
+    "./localization": {
+      "types": "./dist/localization/index.d.ts",
+      "import": "./dist/localization/index.js",
+      "require": "./dist/localization/index.cjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.cjs"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js",
+      "require": "./dist/types/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2",
+    "rimraf": "^6.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "workforce-compliance",
+    "global-payroll",
+    "tax-id",
+    "iban",
+    "validators",
+    "hrms",
+    "payroll",
+    "typescript",
+    "open-source"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dilanmelvin/Regium.git"
+  },
+  "homepage": "https://regium.dev",
+  "bugs": "https://github.com/dilanmelvin/Regium/issues"
+}
