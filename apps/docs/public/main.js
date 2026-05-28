@@ -1,9 +1,9 @@
-// Install tab switcher
-const commands = {
-  npm: "npm install @regium/core @regium/data",
+﻿// ─── Install tab switcher ─────────────────────────────────────────────────────
+const PM_COMMANDS = {
+  npm:  "npm install @regium/core @regium/data",
   pnpm: "pnpm add @regium/core @regium/data",
   yarn: "yarn add @regium/core @regium/data",
-  bun: "bun add @regium/core @regium/data",
+  bun:  "bun add @regium/core @regium/data",
 };
 
 document.querySelectorAll(".install__tab").forEach((tab) => {
@@ -11,7 +11,7 @@ document.querySelectorAll(".install__tab").forEach((tab) => {
     document.querySelectorAll(".install__tab").forEach((t) => t.classList.remove("active"));
     tab.classList.add("active");
     const pm = tab.dataset.pm;
-    document.getElementById("install-code").innerHTML = `<code>${commands[pm]}</code>`;
+    document.getElementById("install-code").innerHTML = `<code>${PM_COMMANDS[pm]}</code>`;
   });
 });
 
@@ -19,30 +19,53 @@ document.querySelectorAll(".install__tab").forEach((tab) => {
 document.querySelector(".install__copy")?.addEventListener("click", () => {
   const code = document.getElementById("install-code")?.textContent;
   if (code) {
-    navigator.clipboard.writeText(code).then(() => {
+    navigator.clipboard.writeText(code.trim()).then(() => {
       const btn = document.querySelector(".install__copy");
       btn.textContent = "✓";
-      setTimeout(() => {
-        btn.textContent = "📋";
-      }, 1500);
+      setTimeout(() => { btn.textContent = "📋"; }, 1500);
     });
   }
 });
+// (country example tabs handled by setIDECode above)
 
-// Navbar scroll effect
-let lastScroll = 0;
+// (country example tabs and IDE code are in Experience Centre only)
+
+// ─── Navbar scroll-spy ────────────────────────────────────────────────────────
+const NAV_SECTIONS = ["features", "install", "validators", "countries", "use-cases"];
+
+function updateNavActive() {
+  const scrollY = window.scrollY + 120;
+  let current = "";
+
+  for (const id of NAV_SECTIONS) {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= scrollY) current = id;
+  }
+
+  // Section links
+  document.querySelectorAll(".nav__link[data-section]").forEach((link) => {
+    link.classList.toggle("nav__link--active", link.dataset.section === current);
+  });
+
+  // Home link — active only when no section is in view (top of page)
+  const homeLink = document.getElementById("nav-home");
+  if (homeLink) {
+    homeLink.classList.toggle("nav__link--active", current === "");
+  }
+}
+
+window.addEventListener("scroll", updateNavActive, { passive: true });
+updateNavActive(); // run once on load
+
+// Navbar scroll border effect
 window.addEventListener("scroll", () => {
   const nav = document.getElementById("nav");
-  const scrollY = window.scrollY;
-  if (scrollY > 100) {
-    nav.style.borderBottomColor = "var(--border-light)";
-  } else {
-    nav.style.borderBottomColor = "var(--border)";
+  if (nav) {
+    nav.style.borderBottomColor = window.scrollY > 100 ? "var(--border-light)" : "var(--border)";
   }
-  lastScroll = scrollY;
-});
+}, { passive: true });
 
-// Smooth reveal on scroll
+// ─── Scroll reveal ────────────────────────────────────────────────────────────
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
