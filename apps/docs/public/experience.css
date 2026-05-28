@@ -374,3 +374,117 @@
 #payroll-grid .exp-grid {
   margin-bottom: 24px;
 }
+
+/* ─── Code generator IDE ────────────────────────────────────────────────────── */
+.code-gen__opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.code-gen__opt {
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 150ms;
+}
+
+.code-gen__opt:hover { color: var(--text); border-color: var(--border-light); }
+.code-gen__opt.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* IDE window */
+.code-gen__ide {
+  border-radius: var(--radius-lg);
+  border: 1px solid #2a2a2e;
+  background: #0d0d0f;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.code-gen__ide-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #161618;
+  border-bottom: 1px solid #2a2a2e;
+}
+
+.code-gen__ide-file {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #8b8b9a;
+  flex: 1;
+}
+
+.code-gen__ide-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.code-gen__ide-install {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #4a4a5e;
+}
+
+.code-gen__copy {
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: 1px solid #3a3a4a;
+  background: #1e1e24;
+  color: #8b8b9a;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.code-gen__copy:hover { border-color: var(--accent); color: var(--accent-light); }
+
+.code-gen__ide-body {
+  display: flex;
+  overflow: hidden;
+}
+
+.code-gen__lines {
+  padding: 20px 12px 20px 8px;
+  min-width: 44px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: #3a3a4e;
+  background: #0d0d0f;
+  border-right: 1px solid #1e1e24;
+  user-select: none;
+  white-space: pre;
+}
+
+.code-gen__pre {
+  flex: 1;
+  margin: 0;
+  padding: 20px 24px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-x: auto;
+  max-height: 520px;
+  overflow-y: auto;
+  color: #c9d1d9;
+}
+
+.code-gen__pre code { color: inherit; }
+
+/* Syntax colors inside code-gen IDE */
+.code-gen__pre .cg-kw  { color: #ff7b72; }
+.code-gen__pre .cg-str { color: #a5d6ff; }
+.code-gen__pre .cg-fn  { color: #d2a8ff; }
+.code-gen__pre .cg-cmt { color: #8b949e; font-style: italic; }
+.code-gen__pre .cg-num { color: #79c0ff; }
